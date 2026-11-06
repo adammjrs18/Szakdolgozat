@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="drawer.toggle()" aria-label="Toggle sidenav" class="menu-btn">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container class="app-container">
+
+  <mat-sidenav #drawer mode="side" opened class="app-sidenav">
+    <mat-nav-list class="nav-list">
+      <a>
+        <mat-list-item routerLink="/home">Kezdőlap</mat-list-item>
+      </a>
+         <a>
+        <mat-list-item routerLink="/services">Szolgáltatások</mat-list-item>
+      </a>
+         <a>
+        <mat-list-item routerLink="/appointment">Időpontfoglalás</mat-list-item>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="app-sidenav-content">
+    <div class="content-body">
+     <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
